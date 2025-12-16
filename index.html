@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>فهرست</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Vazirmatn", "Segoe UI", Tahoma, sans-serif;
+      background: #f5f5f5 url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjVmNWY1Ii8+PGxpbmUgeDE9IjAiIHkxPSIwIiB4Mj0iMjAwIiB5Mj0iMjAwIiBzdHJva2U9IiNlZWVlZWUiIHN0cm9rZS13aWR0aD0iMSIvPjxsaW5lIHgxPSIyMDAiIHkxPSIwIiB4Mj0iMCIgeTI9IjIwMCIgc3Ryb2tlPSIjZWVlZWVlIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=') repeat;
+      color: #2c3e50;
+      line-height: 1.6;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #34495e, #2c3e50);
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .header h1 {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+
+    .menu-item {
+      display: flex;
+      align-items: center;
+      background: #f0f0f0;
+      border-radius: 12px;
+      padding: 15px 20px;
+      margin: 12px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .menu-item:hover {
+      background: #e0e0e0;
+      transform: translateX(5px);
+    }
+
+    .menu-text {
+      flex-grow: 1;
+      font-size: 1.1rem;
+      text-align: center;
+      padding-right: 10px;
+    }
+
+    .icon-circle {
+      width: 50px;
+      height: 50px;
+      background: #34495e;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.2rem;
+    }
+
+    .icon-link {
+      color: white;
+      text-decoration: none;
+    }
+
+    .sub-header {
+      background: linear-gradient(135deg, #2980b9, #1a5276);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .back-button {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 100;
+      background: rgba(255,255,255,0.8);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
+
+    .back-button a {
+      color: #2c3e50;
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+
+    .main-menu {
+      margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .menu-item {
+        padding: 12px 15px;
+      }
+      .menu-text {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- صفحه اصلی -->
+  <div class="header">
+    <h1>فهرست</h1>
+  </div>
+
+  <div class="container main-menu">
+    <a href="#services" class="menu-item">
+      <div class="menu-text">فرم های خدمات مشترک</div>
+      <div class="icon-circle">
+        <span class="icon-link">📋</span>
+      </div>
+    </a>
+
+    <a href="#technical" class="menu-item">
+      <div class="menu-text">فرم های فنی</div>
+      <div class="icon-circle">
+        <span class="icon-link">📋</span>
+      </div>
+    </a>
+
+    <a href="#checklists" class="menu-item">
+      <div class="menu-text">چک لیست های فنی عملیات</div>
+      <div class="icon-circle">
+        <span class="icon-link">📋</span>
+      </div>
+    </a>
+
+    <a href="#reports" class="menu-item">
+      <div class="menu-text">گزارش تولید</div>
+      <div class="icon-circle">
+        <span class="icon-link">📋</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- بخش فرم های خدمات مشترک -->
+  <div id="services" style="display:none;">
+    <div class="back-button">
+      <a href="javascript:history.back()">←</a>
+    </div>
+    <div class="sub-header">
+      <h1>فرم های خدمات مشترک</h1>
+    </div>
+    <div class="container">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeODXf-kAUTaKzKioULDCxhWaM1yTzY__eniVcx5cGCS7I1jA/viewform?usp=header" target="_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">درخواست کالا از انبار</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSevCD_Q1QHjUZ7-u972hIIP7msuyrfcwf7CSaLKr3YMade_Ug/viewform?usp=header" target="_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">درخواست انجام خدمات</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdtmU_rnGhtb5VkJ8wGYtJVBgjEUEPQ1VKFSBh1RI7V-EThug/viewform?usp=header" target="_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">درخواست کار فنی</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSecJnqTU7Q0ECqKyrN-Us8yTs82FuwUJSxFDpniccMe9TXXQA/viewform?usp=publish-editor" target="_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">درخواست خدمات فرآوری</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScJ-ST6-hWkPiSHy2rRVgB1MxEgrqlbIxDiHuVVZUyiGTbMzg/viewform?usp=header" target="_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">مجوز خروج کالا</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfC1usH8ufmQbMQ64D_ZmieDNLJP8kJbEaJcPZeWy6KwxLlcQ/viewform?usp=publish-editor" target="_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">مجوز ورود</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeo34C9F60CO3S_x-xQKwWNdXTwUy29Mcz0xFdyU-GsQL3ydA/viewform?usp=header" target="_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">گزارش کار نیکو</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfCVzbIsDUkZMDPLsKvocpXOoix31N5RT1sxtc-JXN8bW82Sw/viewform?usp=header" target="_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">ارتباط مستقیم با مدیریت (SOP)</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+      <a href="https://drive.google.com/file/d/1Nk9rnDx1MbiceSQck3iTsgeBF5otqmOT/view?usp=drive_link" target="_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">فرآیندهای سازمانی (SOP)</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+      <a href="https://drive.google.com/file/d/1gTig8pTJLFBxmsajnFfxFAYeUw-58oX7/view?usp=drive_link" target="_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">منشور سازمانی</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- بخش فرم های فنی -->
+  <div id="technical" style="display:none;">
+    <div class="back-button">
+      <a href="javascript:history.back()">←</a>
+    </div>
+    <div class="sub-header">
+      <h1>فرم های فنی</h1>
+    </div>
+    <div class="container">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSepoJdN7vZl01JSHpFG3lyBeIRVJPUwGqJZnn3xohoH0mOGQA/viewform?usp=header" target="_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">چک لیست تعمیرات</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSco9fbCjgHfaKCFfGk-s-v8wo8cz2YJy3P_VXHjSlETG_ohZg/viewform?usp=dialog" target="_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">چک لیست بازدید دوره ای</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- بخش چک لیست های فنی عملیات -->
+  <div id="checklists" style="display:none;">
+    <div class="back-button">
+      <a href="javascript:history.back()">←</a>
+    </div>
+    <div class="sub-header">
+      <h1>چک لیست های فنی عملیات</h1>
+    </div>
+    <div class="container">
+      <a href="#mill" class="menu-item">
+        <div class="menu-text">ویبره میل</div>
+        <div class="icon-circle">
+          <span class="icon-link">📋</span>
+        </div>
+      </a>
+      <a href="#crusher" class="menu-item">
+        <div class="menu-text">سنگ شکن</div>
+        <div class="icon-circle">
+          <span class="icon-link">📋</span>
+        </div>
+      </a>
+      <a href="#leaching" class="menu-item">
+        <div class="menu-text">استخراج حلالی</div>
+        <div class="icon-circle">
+          <span class="icon-link">📋</span>
+        </div>
+      </a>
+      <a href="#linking" class="menu-item">
+        <div class="menu-text">لیچینگ</div>
+        <div class="icon-circle">
+          <span class="icon-link">📋</span>
+        </div>
+      </a>
+      <a href="#seprator" class="menu-item">
+        <div class="menu-text">جداکننده مغناطیسی</div>
+        <div class="icon-circle">
+          <span class="icon-link">📋</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- بخش ویبره میل -->
+  <div id="mill" style="display:none;">
+    <div class="back-button">
+      <a href="javascript:history.back()">←</a>
+    </div>
+    <div class="sub-header">
+      <h1>ویبره میل</h1>
+    </div>
+    <div class="container">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSd-Gfn3l_G0T5wK0USPh2Bq1-kT-jJMBmefHogXqvfC-O-Oxg/viewform?usp=header" target="_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">راه اندازی ویبره میل</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeH3TzvTPCzi12tOBBX80IMz4jnchukEs2yq9LHTytgwoYz2g/viewform?usp=header" target="_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">حین عملیات ویبره میل</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeg096crBlb7hKZKWcbhIr73LNnKiZBVoLOGeplcxKJ5TkdGg/viewform?usp=dialog" target="_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">انتهای عملیات ویبره میل</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- بخش سنگ شکن -->
+  <div id="crusher" style="display:none;">
+    <div class="back-button">
+      <a href="javascript:history.back()">←</a>
+    </div>
+    <div class="sub-header">
+      <h1>سنگ شکن</h1>
+    </div>
+    <div class="container">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaNjPcUJLohJpaWDF4nGQekKMVzvQ-DlOoTIEUAHgBJXp8Tg/viewform?usp=dialog" target="_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">راه اندازی سنگ شکن</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOhGNh9m4ZABAO6pXK-k2irjLf_I1BVtSsZIJokqR_1BC3bQ/viewform?usp=dialog" target="_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">حین عملیات سنگ شکن</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdLy5rzgL56FDU1rT8XhDV9D6MpNMRDbXAO5HHzyKksymrbsw/viewform?usp=header" target="_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">انتهای عملیات سنگ شکن</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- بخش استخراج حلالی -->
+  <div id="leaching" style="display:none;">
+    <div class="back-button">
+      <a href="javascript:history.back()">←</a>
+    </div>
+    <div class="sub-header">
+      <h1>استخراج حلالی</h1>
+    </div>
+    <div class="container">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSe9ovv2WROk1T5wpOhn0K_tV72qE_Mu3FVFTHlFnSJiCP1OWg/viewform?usp=header" target="_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">راه اندازی استخراج حلالی</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeuRiJ-yuVZucwO2dqSrisMwNEKtkQ3ObKqRfdaUOK1fkeSug/viewform?usp=header" target="_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">بازدید ساعتی</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSedqJZ0RV4SfyFfbR2126KjYYY0adwkyvRd_8rW-X3Fufq73Q/viewform?usp=header" target="_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">بازدید شیفتی</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfLwJ0zqd1oEdkn3zHNsrvGP9pnv2INnx8j3Dj7trk2qH2LYA/viewform?usp=header" target="_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">بازدید هفتگی</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdAZmSspgpHWAQRW-laxVozcx-uYJLcwgp8zQXTmcqMzLiSIA/viewform?usp=header" target="_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">انتهای عملیات استخراج حلالی</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- بخش لیچینگ -->
+  <div id="linking" style="display:none;">
+    <div class="back-button">
+      <a href="javascript:history.back()">←</a>
+    </div>
+    <div class="sub-header">
+      <h1>لیچینگ</h1>
+    </div>
+    <div class="container">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSd00FfEGNSws-eCq-7AnBzo2luKTVFr7zG8n93KA7UdD_t49w/viewform?usp=header" target="_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">شروع کار لیچینگ</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdtzQTTRleenMe5Blpw-Dy2FvFYoIcqFkRw80DbDqYkdRFj9Q/viewform?usp=header" target="_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">انتهای کار لیچینگ</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+    </div>
+  </div>
+ <!-- بخش جداکننده مغناطیسی -->
+  <div id="seprator" style="display:none;">
+    <div class="back-button">
+      <a href="javascript:history.back()">←</a>
+    </div>
+    <div class="sub-header">
+      <h1>جداکننده مغناطیسی</h1>
+    </div>
+    <div class="container">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSf3HflwXDtP3ZCqQnilemFqvu6ID_0KD6Tb3Mkr5BR3hOKY2Q/viewform?usp=header" target="_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">راه اندازی جداکننده مغناطیسی</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOaD4KPTsm2_cAtF33kDV7sxm_RUO7r99MLVKxGU_vFS6njg/viewform?usp=header"_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">حین عملیات جداکننده مغناطیسی</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeWibLhwOdkQ2JCvRvo4UrKGesoCPRRruHEe1w2IuBBDDqAbA/viewform?usp=header" target="_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">انتهای عملیات جداکننده مغناطیسی</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- بخش گزارش تولید -->
+  <div id="reports" style="display:none;">
+    <div class="back-button">
+      <a href="javascript:history.back()">←</a>
+    </div>
+    <div class="sub-header">
+      <h1>گزارش تولید</h1>
+    </div>
+    <div class="container">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfu5i-46uIyZTLF-NZidd-eIqXP5c87bWvImnHU3CtGmAuqAg/viewform?usp=header" target="_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">سنگ شکن</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSddsDVS6icu0oAYh_EFIy4FcDuvTfrEyZTbqI0ffO8X5tDbWA/viewform?usp=dialog" target="_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">آسیا</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScN3SlLcHPIGO8mI0CGgBPE7KuRP0qQrxZ4_65eJiBmoiI23g/viewform?usp=header" target="_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">لیچینگ</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+      <a href="https://docs.google.com/spreadsheets/d/1l3FGcG74ZPo-m7rliMd7y15tCK937ilrn5W4nrVRzMw/edit?usp=sharing" target="_blank" rel="noopener" class="menu-item">
+        <div class="menu-text">ثبت نتایج آنالیز</div>
+        <div class="icon-circle">
+          <span class="icon-link">🔗</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <script>
+  function showPageByHash() {
+    // مخفی کردن همه صفحات
+    document.querySelectorAll('[id]').forEach(el => {
+      if (el.id !== 'back-button' && el.id) {
+        el.style.display = 'none';
+      }
+    });
+    
+    // نمایش منوی اصلی اگر هش وجود نداشت
+    const mainMenu = document.querySelector('.container.main-menu');
+    if (!window.location.hash) {
+      if (mainMenu) mainMenu.style.display = 'block';
+      return;
+    }
+
+    // نمایش صفحه مربوط به هش
+    const hash = window.location.hash.substring(1);
+    const targetPage = document.getElementById(hash);
+    if (targetPage) {
+      targetPage.style.display = 'block';
+      if (mainMenu) mainMenu.style.display = 'none';
+    } else {
+      if (mainMenu) mainMenu.style.display = 'block';
+    }
+  }
+
+  // هنگام بارگذاری اولیه
+  document.addEventListener('DOMContentLoaded', showPageByHash);
+
+  // هنگام تغییر هش (مثلاً کلیک روی لینک‌های #services)
+  window.addEventListener('hashchange', showPageByHash);
+</script>
+
+</body>
+</html>
